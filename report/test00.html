@@ -156,15 +156,15 @@
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">开始时间</button>
-                <span class="text-dark">2023-04-22 16:02:38</span>
+                <span class="text-dark">2023-06-08 22:01:59</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">执行时间</button>
-                <span class="text-dark">1.57 S</span>
+                <span class="text-dark">0.60 S</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">用例总数</button>
-                <span class="text-dark">4</span>
+                <span class="text-dark">5</span>
             </li>
 
 
@@ -175,15 +175,15 @@
 
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">成功用例</button>
-                <span class="text-success">4</span>
+                <span class="text-success">3</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-warning">失败用例</button>
-                <span class="text-warning">0</span>
+                <span class="text-warning">1</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-danger">错误用例</button>
-                <span class="text-danger">0</span>
+                <span class="text-danger">1</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-secondary">跳过用例</button>
@@ -254,11 +254,11 @@
                 <tr>
                     <td>1</td>
                     <td class="TestEmployeeInfoSet">TestEmployeeInfoSet</td>
-                    <td>test01_chk_employee</td>
+                    <td>test01_list_A001</td>
                     <td>None</td>
-                    <td>1.57s</td>
+                    <td>0.322s</td>
                     
-                        <td class="text-success">成功</td>
+                        <td class="text-warning">失败</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -270,7 +270,37 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test01_chk_employee (script.test_EmployeeInfoSet.TestEmployeeInfoSet.test01_chk_employee)执行——>【通过】
+                            <pre>test01_list_A001 (script.test_EmployeeInfoSet.TestEmployeeInfoSet.test01_list_A001)执行——>【失败】
+</pre>
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "D:\test\python3.11\Lib\unittest\case.py", line 57, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "D:\test\python3.11\Lib\unittest\case.py", line 623, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "D:\test\python3.11\Lib\unittest\case.py", line 579, in _callTestMethod
+    if method() is not None:
+       ^^^^^^^^
+</pre>
+                        
+
+                            <pre>  File "D:\bear\PycharmProjects\mes-ams\script\test_EmployeeInfoSet.py", line 30, in test01_list_A001
+    self.assertEqual(200, resNull.status_code)  # 验证状态码
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+</pre>
+                        
+
+                            <pre>AssertionError: 200 != 401
 </pre>
                         
                         
@@ -280,11 +310,11 @@
                 <tr>
                     <td>2</td>
                     <td class="TestEmployeeInfoSet">TestEmployeeInfoSet</td>
-                    <td>test02_add_employee</td>
+                    <td>test02_list2_A002</td>
                     <td>None</td>
-                    <td>0.0s</td>
+                    <td>0.278s</td>
                     
-                        <td class="text-success">成功</td>
+                        <td class="text-danger">错误</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -296,7 +326,37 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test02_add_employee (script.test_EmployeeInfoSet.TestEmployeeInfoSet.test02_add_employee)执行——>【通过】
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "D:\test\python3.11\Lib\unittest\case.py", line 57, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "D:\test\python3.11\Lib\unittest\case.py", line 623, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "D:\test\python3.11\Lib\unittest\case.py", line 579, in _callTestMethod
+    if method() is not None:
+       ^^^^^^^^
+</pre>
+                        
+
+                            <pre>  File "D:\bear\PycharmProjects\mes-ams\script\test_EmployeeInfoSet.py", line 49, in test02_list2_A002
+    res = gtr.json()
+          ^^^^^^^^
+</pre>
+                        
+
+                            <pre>AttributeError: 'tuple' object has no attribute 'json'
+</pre>
+                        
+
+                            <pre>test02_list2_A002 (script.test_EmployeeInfoSet.TestEmployeeInfoSet.test02_list2_A002)执行——>【错误Error】
 </pre>
                         
                         
@@ -306,7 +366,7 @@
                 <tr>
                     <td>3</td>
                     <td class="TestEmployeeInfoSet">TestEmployeeInfoSet</td>
-                    <td>test03_edi_employee</td>
+                    <td>test03_list2_A003</td>
                     <td>None</td>
                     <td>0.0s</td>
                     
@@ -322,7 +382,7 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test03_edi_employee (script.test_EmployeeInfoSet.TestEmployeeInfoSet.test03_edi_employee)执行——>【通过】
+                            <pre>test03_list2_A003 (script.test_EmployeeInfoSet.TestEmployeeInfoSet.test03_list2_A003)执行——>【通过】
 </pre>
                         
                         
@@ -332,7 +392,7 @@
                 <tr>
                     <td>4</td>
                     <td class="TestEmployeeInfoSet">TestEmployeeInfoSet</td>
-                    <td>test04_del_employee</td>
+                    <td>test04_list2_A004</td>
                     <td>None</td>
                     <td>0.0s</td>
                     
@@ -348,7 +408,33 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test04_del_employee (script.test_EmployeeInfoSet.TestEmployeeInfoSet.test04_del_employee)执行——>【通过】
+                            <pre>test04_list2_A004 (script.test_EmployeeInfoSet.TestEmployeeInfoSet.test04_list2_A004)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td class="TestEmployeeInfoSet">TestEmployeeInfoSet</td>
+                    <td>test05_list2_A005</td>
+                    <td>None</td>
+                    <td>0.0s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test05_list2_A005 (script.test_EmployeeInfoSet.TestEmployeeInfoSet.test05_list2_A005)执行——>【通过】
 </pre>
                         
                         
@@ -480,9 +566,9 @@
                     show: false
                 },
                 data: [
-                    {value: 4, name: '通过'},
-                    {value: 0, name: '失败'},
-                    {value: 0, name: '错误'},
+                    {value: 3, name: '通过'},
+                    {value: 1, name: '失败'},
+                    {value: 1, name: '错误'},
                     {value: 0, name: '跳过'}
                 ]
             }
@@ -502,8 +588,8 @@
             {
                 name: '测试结果',
                 type: 'gauge',
-                detail: {formatter: '100.00%'},
-                data: [{value: '100.00', name: '用例通过率'}],
+                detail: {formatter: '60.00%'},
+                data: [{value: '60.00', name: '用例通过率'}],
                 axisLine: {
                     lineStyle: {
                         color: [

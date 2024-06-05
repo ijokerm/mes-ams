@@ -1,10 +1,12 @@
 """
-告警信息维护-员工信息设定
+员工信息设定
 """
 
 import requests
 
 import app
+from data.employeeinfo import list
+
 
 class EmployeeInfoSet_API():
     # 定义初始化方法，实例化之后的对象属性
@@ -15,9 +17,8 @@ class EmployeeInfoSet_API():
         self.del_url = app.base_url + '/deleteAmsEmploye'
 
     def list_api(self):
-        return requests.post(url= self.list_url, headers= app.header , json= app.chk_null), requests.post(url= self.list_url, headers= app.header , json= app.chk_employeeNo) \
-            , requests.post(url= self.list_url, headers= app.header , json= app.chk_employeeName),requests.post(url= self.list_url, headers= app.header , json= app.chk_two)
-
+        return requests.post(url= self.list_url, headers= app.header, json= list.chk_null), requests.post(url= self.list_url, headers= app.header, json= list.chk_employeeNo) \
+            , requests.post(url= self.list_url, headers= app.header, json= list.chk_employeeName), requests.post(url= self.list_url, headers= app.header, json= list.chk_two)
 
     def add_api(self):
         return requests.post(url= self.add_url, headers= app.header,  json= app.employee_add)
@@ -31,5 +32,5 @@ class EmployeeInfoSet_API():
 if __name__ == '__main__':
     ces1 = EmployeeInfoSet_API()
     w,x,y,z = ces1.list_api()
-
-    print(w.json())
+    r1 = requests.get("https://www.baidu.com/")
+    print(r1.status_code)
