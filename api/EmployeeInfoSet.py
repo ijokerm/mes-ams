@@ -32,5 +32,3 @@ class EmployeeInfoSet_API():
 if __name__ == '__main__':
     ces1 = EmployeeInfoSet_API()
     w,x,y,z = ces1.list_api()
-    r1 = requests.get("https://www.baidu.com/")
-    print(r1.status_code)
