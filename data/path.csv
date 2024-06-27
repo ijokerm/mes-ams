@@ -1,0 +1,11 @@
+datack/get/halm/summary/charts,"{
+""sideNo"":0,
+""LineNoList"":[1,2],
+""tagsContains"":[],
+""tagsNotContains"":[],
+""comment"":"""",
+""trackLabel"":"""",
+""startTime"":app.curbegin,
+""endTime"":app.curend
+}"
+datack/get/halm/halfHour/summary,

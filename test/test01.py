@@ -26,9 +26,12 @@ class DB_Obj(object):
         self.client = Client(host=host, port=port, database=database)
 
 
+
+
 if __name__ == '__main__':
     db_obj = DB_Obj('maxwell_mes')
     query = 'select wafer_id  from maxwell_mes.measure_his_wafer_printing_el_pl'
+    print(db_obj.client.execute(query))
 
 
 

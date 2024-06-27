@@ -29,4 +29,4 @@ enddate = requests.get(time_url).json()[6]['end'][0:10]
 
 #
 # print(token)
-print(startdate,enddate)
+print(curbegin)

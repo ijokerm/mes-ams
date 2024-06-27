@@ -7,30 +7,28 @@
 @Date    ：2024/6/6 17:33 
 """
 import requests
-
+import csv
 import app
+
 
 class TracerCollectCK():
     # 定义初始化方法，实例化之后的对象属性
     def __init__(self):
-        self.url = app.base_url + '/datack/get/halm/summary/charts'
+
         self.session = requests.Session()
         self.token = "Bearer" + ' ' + app.token
         self.hearder = self.session.headers.update({"Authorization": self.token})
-        self.payload = {
-                        "sideNo":0,
-                        "LineNoList":[1,2],
-                        "tagsContains":[],
-                        "tagsNotContains":[],
-                        "comment":"",
-                        "trackLabel":"",
-                        "startTime":app.curbegin,
-                        "endTime":app.curend
-                    }
+
 
     def testcode(self):
-        header = {"Authorization": app.token}
-        return requests.post(self.url,json= self.payload,cookies = app.cookies)
+        with open('../data/path.csv', encoding='utf-8') as csvfile:
+            reader = csv.reader(csvfile)
+            for i in reader:
+                url = i[0]
+                return app.base_url + url
+
+
+
 
     def testtime(self):
         url =app.base_url + '/datack/ng/list'
@@ -54,5 +52,5 @@ class TracerCollectCK():
 
 if __name__ == '__main__':
     ces1 = TracerCollectCK()
-    res = ces1.testtime()
-    print(res.status_code)
+    res = ces1.testcode()
+    print(res)

@@ -1,2 +1,2 @@
-2023-06-08 22:01:59,937 INFO [root] [test_EmployeeInfoSet.py(test01_list_A001:27)] - 查询条件为员工编号，员工信息查询的结果为：{'code': 401, 'message': 'login again.please'}
-2023-06-08 22:01:59,937 INFO [root] [test_EmployeeInfoSet.py(test01_list_A001:28)] - 查询条件为员工名称，员工信息查询的结果为：{'code': 401, 'message': 'login again.please'}
+2024-06-06 09:39:04,093 INFO [root] [test_EmployeeInfoSet.py(test01_list_A001:27)] - 查询条件为员工编号，员工信息查询的结果为：{'code': 401, 'message': 'login again.please'}
+2024-06-06 09:39:04,094 INFO [root] [test_EmployeeInfoSet.py(test01_list_A001:28)] - 查询条件为员工名称，员工信息查询的结果为：{'code': 401, 'message': 'login again.please'}
